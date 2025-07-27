@@ -1,4 +1,4 @@
-# wjb-CLI
+# wue-CLI
 
 一个用于快速创建 Vue.js 项目的 CLI 脚手架工具，支持多种项目模板。
 
@@ -14,13 +14,13 @@
 
 ```bash
 # 全局安装
-npm install -g wjb-cli
+npm install -g wue-cli
 
 # 或者使用 pnpm
-pnpm add -g wjb-cli
+pnpm add -g wue-cli
 
 # 或者使用 yarn
-yarn global add wjb-cli
+yarn global add wue-cli
 ```
 
 ## 🛠️ 使用方法
@@ -29,18 +29,18 @@ yarn global add wjb-cli
 
 ```bash
 # 交互式创建项目
-wjb-cli create
+wue-cli create
 
 # 直接指定项目名称
-wjb-cli create my-project
+wue-cli create my-project
 ```
 
 ### 查看版本
 
 ```bash
-wjb-cli -v
+wue-cli -v
 # 或
-wjb-cli --version
+wue-cli --version
 ```
 
 ## 📋 可用模板
@@ -53,7 +53,7 @@ wjb-cli --version
 ## 🏗️ 项目结构
 
 ```
-wjb-cli/
+wue-cli/
 ├── src/
 │   ├── command/
 │   │   └── create.ts          # 创建项目命令
