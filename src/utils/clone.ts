@@ -1,5 +1,5 @@
 import { simpleGit, SimpleGitOptions } from "simple-git";
-const createLogger = require("progress-estimator");
+import createLogger from "progress-estimator";
 import chalk from "chalk";
 import { exec } from "child_process";
 import { promisify } from "util";
