@@ -1,4 +1,4 @@
-# wue-CLI
+# wve-CLI
 
 一个用于快速创建 Vue.js 项目的 CLI 脚手架工具，支持多种项目模板。
 
@@ -14,13 +14,13 @@
 
 ```bash
 # 全局安装
-npm install -g wue-cli
+npm install -g wve-cli
 
 # 或者使用 pnpm
-pnpm add -g wue-cli
+pnpm add -g wve-cli
 
 # 或者使用 yarn
-yarn global add wue-cli
+yarn global add wve-cli
 ```
 
 ## 🛠️ 使用方法
@@ -29,18 +29,18 @@ yarn global add wue-cli
 
 ```bash
 # 交互式创建项目
-wue-cli create
+wve-cli create
 
 # 直接指定项目名称
-wue-cli create my-project
+wve-cli create my-project
 ```
 
 ### 查看版本
 
 ```bash
-wue-cli -v
+wve-cli -v
 # 或
-wue-cli --version
+wve-cli --version
 ```
 
 ## 📋 可用模板
@@ -53,7 +53,7 @@ wue-cli --version
 ## 🏗️ 项目结构
 
 ```
-wue-cli/
+wve-cli/
 ├── src/
 │   ├── command/
 │   │   └── create.ts          # 创建项目命令

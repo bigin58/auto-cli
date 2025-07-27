@@ -1,7 +1,7 @@
 {
-  "name": "wue-cli",
+  "name": "wve-cli",
   "version": "0.0.1",
-  "description": "wue cli 脚手架",
+  "description": "wve cli 脚手架",
   "bin": {
     "wjb-cli": "bin/index.js"
   },

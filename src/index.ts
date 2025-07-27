@@ -2,7 +2,7 @@ import { Command } from "commander";
 import { version } from "../package.json";
 import create from "./command/create";
 
-const program = new Command("wue-cli");
+const program = new Command("wve-cli");
 program.version(version, "-v, --version");
 
 program
