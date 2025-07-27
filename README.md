@@ -29,18 +29,18 @@ yarn global add wve-cli
 
 ```bash
 # 交互式创建项目
-wve-cli create
+wve create
 
 # 直接指定项目名称
-wve-cli create my-project
+wve create my-project
 ```
 
 ### 查看版本
 
 ```bash
-wve-cli -v
+wve -v
 # 或
-wve-cli --version
+wve --version
 ```
 
 ## 📋 可用模板
