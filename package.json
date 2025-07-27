@@ -1,15 +1,28 @@
 {
   "name": "auto-cli",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "auto cli 脚手架",
+  "bin": {
+    "auto-cli": "bin/index.js"
+  },
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c rollup.config.js --bundleConfigAsCjs"
   },
-  "keywords": [],
+  "keywords": [
+    "Vite",
+    "Vue",
+    "TypeScript",
+    "ElementPulus"
+  ],
+  "files": [
+    "dist",
+    "bin",
+    "README.md"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@inquirer/prompts": "^7.7.1",
     "@rollup/plugin-commonjs": "^28.0.6",
