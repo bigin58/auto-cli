@@ -1,9 +1,9 @@
 {
-  "name": "auto-cli",
+  "name": "wjb-cli",
   "version": "0.0.1",
-  "description": "auto cli 脚手架",
+  "description": "wjb cli 脚手架",
   "bin": {
-    "auto-cli": "bin/index.js"
+    "wjb-cli": "bin/index.js"
   },
   "main": "dist/index.js",
   "scripts": {
