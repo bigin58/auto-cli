@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "wve cli 脚手架",
   "bin": {
-    "wjb-cli": "bin/index.js"
+    "wve": "bin/index.js"
   },
   "main": "dist/index.js",
   "scripts": {
