@@ -1,4 +1,4 @@
-# Auto-CLI
+# wjb-CLI
 
 一个用于快速创建 Vue.js 项目的 CLI 脚手架工具，支持多种项目模板。
 
@@ -14,13 +14,13 @@
 
 ```bash
 # 全局安装
-npm install -g auto-cli
+npm install -g wjb-cli
 
 # 或者使用 pnpm
-pnpm add -g auto-cli
+pnpm add -g wjb-cli
 
 # 或者使用 yarn
-yarn global add auto-cli
+yarn global add wjb-cli
 ```
 
 ## 🛠️ 使用方法
@@ -29,18 +29,18 @@ yarn global add auto-cli
 
 ```bash
 # 交互式创建项目
-auto-cli create
+wjb-cli create
 
 # 直接指定项目名称
-auto-cli create my-project
+wjb-cli create my-project
 ```
 
 ### 查看版本
 
 ```bash
-auto-cli -v
+wjb-cli -v
 # 或
-auto-cli --version
+wjb-cli --version
 ```
 
 ## 📋 可用模板
@@ -53,7 +53,7 @@ auto-cli --version
 ## 🏗️ 项目结构
 
 ```
-auto-cli/
+wjb-cli/
 ├── src/
 │   ├── command/
 │   │   └── create.ts          # 创建项目命令
