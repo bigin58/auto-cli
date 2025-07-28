@@ -37,6 +37,7 @@
     "fs-extra": "^11.3.0",
     "lodash": "^4.17.21",
     "log-symbols": "^4.1.0",
+    "ora": "^5.4.1",
     "progress-estimator": "^0.3.1",
     "rollup": "^4.45.1",
     "rollup-plugin-node-externals": "^5.1.2",
