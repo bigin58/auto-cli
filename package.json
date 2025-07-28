@@ -1,7 +1,7 @@
 {
   "name": "wve-cli",
   "version": "0.1.1",
-  "description": "wve cli 脚手架",
+  "description": "A CLI tool for quickly creating Vue.js projects with multiple templates",
   "bin": {
     "wve": "bin/index.js"
   },
@@ -11,18 +11,31 @@
     "build": "rollup -c rollup.config.js --bundleConfigAsCjs"
   },
   "keywords": [
-    "Vite",
-    "Vue",
-    "TypeScript",
-    "ElementPulus"
+    "cli",
+    "scaffold",
+    "generator",
+    "vue",
+    "vite",
+    "typescript",
+    "element-plus",
+    "template"
   ],
   "files": [
     "dist",
     "bin",
-    "README.md"
+    "README.md",
+    "fonts"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "wjb8191174",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bigin58/auto-cli.git"
+  },
+  "homepage": "https://github.com/bigin58/auto-cli#readme",
+  "bugs": {
+    "url": "https://github.com/bigin58/auto-cli/issues"
+  },
   "devDependencies": {
     "@inquirer/prompts": "^7.7.1",
     "@rollup/plugin-commonjs": "^28.0.6",
