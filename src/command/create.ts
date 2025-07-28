@@ -5,6 +5,7 @@ import { clone } from "../utils/clone";
 import chalk from "chalk";
 import { version, name as packageName } from "../../package.json";
 import { gt } from "lodash";
+import log from "../utils/log";
 
 export interface TemplateInfo {
   name: string;
@@ -23,15 +24,15 @@ export const templates: Map<string, TemplateInfo> = new Map([
       branch: "dev6",
     },
   ],
-  [
-    "react-ts",
-    {
-      name: "react-ts",
-      description: "React + TypeScript 模板",
-      downloadUrl: "https://gitee.com/bigin/admin-pro.git",
-      branch: "dev6",
-    },
-  ],
+  // [
+  //   "react-ts",
+  //   {
+  //     name: "react-ts",
+  //     description: "React + TypeScript 模板",
+  //     downloadUrl: "https://gitee.com/bigin/admin-pro.git",
+  //     branch: "dev6",
+  //   },
+  // ],
 ]);
 
 export const isOverwrite = (projectPath: string) => {
@@ -57,11 +58,10 @@ export const checkNpmLatestVersion = async () => {
   const latestVersion = await getNpmLatesVersion(packageName);
   const needUpdate = gt(latestVersion, version);
   if (needUpdate) {
-    console.warn(`${chalk.red("有新版本")} ${packageName}@${latestVersion}`);
-    console.log(
-      `可使用： ${chalk.yellow(
-        "npm install wve-cli@latest"
-      )}，或者使用：${chalk.yellow("wve update")}更新`
+    log(`有新版本 ${packageName}@${latestVersion}`, "warning");
+    log(
+      `可使用： npm install wve-cli@latest，或者使用：wve update 更新`,
+      "warning"
     );
   }
   return needUpdate;

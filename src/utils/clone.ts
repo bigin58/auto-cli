@@ -3,6 +3,8 @@ import createLogger from "progress-estimator";
 import chalk from "chalk";
 import { exec } from "child_process";
 import { promisify } from "util";
+import log from "./log";
+import figlet from "figlet";
 
 const execAsync = promisify(exec);
 
@@ -15,6 +17,15 @@ const logger = createLogger({
     ),
   },
 });
+
+//
+export const printLogo = () => {
+  const logo = figlet.textSync("WVE CLI", {
+    font: "Standard",
+    horizontalLayout: "default",
+  });
+  console.log(chalk.rgb(40, 156, 193).visible(logo));
+};
 
 const gitOptions: Partial<SimpleGitOptions> = {
   baseDir: process.cwd(),
@@ -34,16 +45,15 @@ export const clone = async (
     await logger(git.clone(url, projectName, options), "代码下载中:", {
       estimate: 8000, // 估计时间为8秒
     });
+    log(`项目创建成功 ${chalk.blue(projectName)}`, "success");
     console.log();
-    console.log(`项目创建成功 ${chalk.blue(projectName)}`);
-    console.log();
-    console.log("执行一下命名启动项目");
-    console.log();
-    console.log(`cd ${chalk.blue(projectName)}`);
-    console.log(`${chalk.yellowBright("pnpm")} install`);
-    console.log(`${chalk.yellowBright("pnpm")} run dev`);
+    log("执行一下命名启动项目", "info");
+    log(`cd ${chalk.blue(projectName)}`, "info");
+    log(`${chalk.yellowBright("pnpm")} install`, "info");
+    log(`${chalk.yellowBright("pnpm")} run dev`, "info");
+    printLogo();
   } catch (error) {
-    console.error("代码下载失败:", error);
+    log(`代码下载失败: ${error}`, "error");
     throw error;
   }
 };

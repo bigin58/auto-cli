@@ -10,6 +10,10 @@
 - 🔧 自动依赖安装
 - 📝 详细的进度提示
 
+## 📕 模板
+
+- ✅ 快速生成 [Vue3+TS+Vite+ElementPlus+Pinia+Axios+Mock 的模板](https://gitee.com/bigin/admin-pro.git)
+
 ## 📦 安装
 
 ```bash
@@ -80,6 +84,10 @@ wve-cli/
 - **@inquirer/prompts**: 提供交互式命令行界面，支持选择、输入等操作
 - **commander**: 命令行参数解析工具，用于创建 CLI 应用
 - **chalk**: 终端文字颜色和样式库，用于美化输出
+- **figlet**: ASCII 艺术字体库，用于生成大标题和装饰性文字
+- **@types/figlet**: figlet 的 TypeScript 类型定义
+- **log-symbols**: 终端符号库，提供成功、错误、警告等状态图标
+- **ora**: 终端加载动画库，提供优雅的加载提示效果
 
 #### 构建工具相关
 
@@ -90,6 +98,7 @@ wve-cli/
 - **@rollup/plugin-terser**: Rollup 插件，用于代码压缩和混淆
 - **rollup-plugin-node-externals**: Rollup 插件，自动外部化 node_modules 中的依赖
 - **rollup-plugin-typescript2**: Rollup 插件，支持 TypeScript 编译
+- **rollup-plugin-copy**: Rollup 插件，用于在构建过程中复制静态文件（如字体文件）
 
 #### Git 操作相关
 
@@ -100,9 +109,15 @@ wve-cli/
 - **fs-extra**: 扩展的 fs 模块，提供更多文件操作方法
 - **@types/fs-extra**: fs-extra 的 TypeScript 类型定义
 
+#### 工具库相关
+
+- **lodash**: JavaScript 实用工具库，提供数组、对象、字符串等操作方法
+- **@types/lodash**: lodash 的 TypeScript 类型定义
+
 #### 进度显示相关
 
 - **progress-estimator**: 进度条显示库，提供友好的进度提示
+- **ora**: 终端加载动画库，提供优雅的加载提示效果
 
 #### TypeScript 相关
 
