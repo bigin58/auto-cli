@@ -35,6 +35,12 @@ wve create
 wve create my-project
 ```
 
+### 更新
+
+```bash
+wve update
+```
+
 ### 查看版本
 
 ```bash
