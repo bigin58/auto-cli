@@ -3,6 +3,8 @@ import fs from "fs-extra";
 import { select, input } from "@inquirer/prompts";
 import { clone } from "../utils/clone";
 import chalk from "chalk";
+import { version, name as packageName } from "../../package.json";
+import { gt } from "lodash";
 
 export interface TemplateInfo {
   name: string;
@@ -43,7 +45,30 @@ export const isOverwrite = (projectPath: string) => {
   });
 };
 
+// 获取wve-cli最新版本
+export const getNpmLatesVersion = async (packageName: string) => {
+  const response = await fetch(`https://registry.npmjs.org/${packageName}`);
+  const data = await response.json();
+  return data["dist-tags"].latest;
+};
+
+// 检查wve-cli最新版本
+export const checkNpmLatestVersion = async () => {
+  const latestVersion = await getNpmLatesVersion(packageName);
+  const needUpdate = gt(latestVersion, version);
+  if (needUpdate) {
+    console.warn(`${chalk.red("有新版本")} ${packageName}@${latestVersion}`);
+    console.log(
+      `可使用： ${chalk.yellow(
+        "npm install wve-cli@latest"
+      )}，或者使用：${chalk.yellow("wve update")}更新`
+    );
+  }
+  return needUpdate;
+};
+
 export default async function create(projectName?: string) {
+  await checkNpmLatestVersion();
   const templatesList = Array.from(templates.values()).map((template) => ({
     name: template.name,
     value: template.name,
